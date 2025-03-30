@@ -10,10 +10,10 @@ describe('Vertical Transposition Cipher', () => {
     expect(encrypted).toBe(expected);
   });
 
-  test('should encrypt ARTEMENKOANDRIYOLEKSADROVYCH to TALO AKYD ROOR ERSC ENEV NIAH MDKY using vertical transposition cipher with ENCRYPT key', () => {
-    const input = 'ARTEMENKOANDRIYOLEKSADROVYCH';
+  test('should encrypt ARTEMENKO ANDRIY OLEKSANDROVYCH to TALR AKYNH ROOD ERSY ENEO NIAC MDKV using vertical transposition cipher with ENCRYPT key', () => {
+    const input = 'ARTEMENKO ANDRIY OLEKSANDROVYCH';
     const key = 'ENCRYPT';
-    const expected = 'TALO AKYD ROOR ERSC ENEV NIAH MDKY';
+    const expected = 'TALR AKYNH ROOD ERSY ENEO NIAC MDKV';
 
     const encrypted = verticalTransposition(input, key);
     expect(encrypted).toBe(expected);
