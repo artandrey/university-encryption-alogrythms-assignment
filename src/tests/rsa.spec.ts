@@ -1,16 +1,16 @@
 import { processRSA } from '../rsa';
 
 describe('RSA Encryption and Decryption', () => {
-  it('should correctly encrypt and decrypt the message "meln"', () => {
+  it('should correctly encrypt and decrypt the message "arte"', () => {
     const p = 23n;
-    const q = 59n;
-    const e = 53n;
-    const message = 'meln';
+    const q = 53n;
+    const e = 17n;
+    const message = 'arte';
 
-    const expectedN = 1357n;
-    const expectedD = 313n;
-    const expectedEncryptedBlocks = [950n, 1129n, 307n, 1162n];
-    const expectedDecryptedMessage = 'meln';
+    const expectedN = 1219n;
+    const expectedD = 673n;
+    const expectedEncryptedBlocks = [360n, 1034n, 990n, 624n];
+    const expectedDecryptedMessage = 'arte';
 
     const result = processRSA(message, p, q, e);
 
@@ -27,16 +27,16 @@ describe('RSA Encryption and Decryption', () => {
     expect(result.decryptedMessage).toBe(expectedDecryptedMessage);
   });
 
-  it('should correctly encrypt and decrypt the message "meln" with p=47, q=89, e=5', () => {
+  it('should correctly encrypt and decrypt the message "arte" with p=47, q=89, e=5', () => {
     const p = 47n;
     const q = 89n;
     const e = 5n;
-    const message = 'meln';
+    const message = 'arte';
 
     const expectedN = 4183n;
     const expectedD = 2429n;
-    const expectedEncryptedBlocks = [2675n, 3459n, 3857n, 2027n];
-    const expectedDecryptedMessage = 'meln';
+    const expectedEncryptedBlocks = [995n, 1791n, 505n, 3459n];
+    const expectedDecryptedMessage = 'arte';
 
     const result = processRSA(message, p, q, e);
 
